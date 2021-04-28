@@ -1,13 +1,41 @@
 import {Component} from 'react'
 import {Nav, Navbar, NavDropdown} from 'react-bootstrap'
 
+var d = new Date();
+var weekday = new Array(7);
+weekday[0] = "Sunday";
+weekday[1] = "Monday";
+weekday[2] = "Tuesday";
+weekday[3] = "Wednesday";
+weekday[4] = "Thursday";
+weekday[5] = "Friday";
+weekday[6] = "Saturday";
+
+var time = ""
+
+if(d.getDay() === 0){
+    time = "11am - 5pm"
+}else if(d.getDay() === 1 || d.getDay() === 2 || d.getDay() === 3 || d.getDay() === 4 || d.getDay() === 5){
+    time = "10am - 7pm"
+}else{
+    time = "11am = 5pm"
+}
+
 class NavigationBar extends Component{
+
+    constructor(props) {
+        super(props);
+          this.state = {
+            openingHours: time
+          }
+    }
+
     render(){
         return (
             <div>
-                <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                     <div className="container-fluid">
-                    <Navbar.Brand href="/">Auto Website</Navbar.Brand>
+                    <Navbar.Brand href="/">Jahvon Prince</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className='ml-auto'>
@@ -23,6 +51,9 @@ class NavigationBar extends Component{
                     </Navbar.Collapse>
                     </div>
                 </Navbar>
+                <div className='opening-hrs-bar'>
+                   <p>Open Today! {this.state.openingHours}</p>
+               </div>
             </div>
             // <ul>
             //     <li><Link to="/">Home</Link></li>
