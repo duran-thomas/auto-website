@@ -18,7 +18,7 @@ if(d.getDay() === 0){
 }else if(d.getDay() === 1 || d.getDay() === 2 || d.getDay() === 3 || d.getDay() === 4 || d.getDay() === 5){
     time = "10am - 7pm"
 }else{
-    time = "11am = 5pm"
+    time = "11am - 5pm"
 }
 
 class NavigationBar extends Component{

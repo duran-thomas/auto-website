@@ -1,7 +1,6 @@
 import { Component } from 'react'
 import { Card, Container, Row, Col } from 'react-bootstrap'
 import Footer from './../Footer'
-import firebase from "firebase";
 
 
 class Home extends Component{
