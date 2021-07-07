@@ -1,58 +1,60 @@
 import React, { Component } from "react";
 import db from "./../../firebase.config";
-import { Card, Button } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import Cars from "./../Cars";
+import Pagination from "./../Paginate";
 
-
-var usedState = [];
+var newState = [];
 class UsedVehicles extends Component {
+  constructor(props) {
+    super(props);
 
-    constructor(props){
-        super(props);
-        this.state = {
-            usedCars: []
-        }
+    this.state = {
+      cars: [],
+      currentPage: 1,
+      carsPerPage: 20,
+      loading: false,
+    };
+  }
 
-        // this.updateState = this.updateState.bind(this)
-    }
-
-    componentDidMount() {
-        
-        const accountref = db.ref('used');
-        accountref.on('value', (snapshot) => {
-            let vehicles = snapshot.val();
-            for (let item in vehicles){
-                usedState.push({
-                    name: vehicles[item].vehicleName,
-                    price: vehicles[item].vehiclePrice,
-                    image: vehicles[item].vehicleImage
-                })
-            }
-        })
-
-        this.setState({usedCars: usedState})
-    }
-
-    // updateState(newState){
-    //     this.setState({newCars: newState})
-    // }
+  componentDidMount() {
+    const accountref = db.ref("used");
+    accountref.on("value", (snapshot) => {
+      let vehicles = snapshot.val();
+      for (let item in vehicles) {
+        newState.push({
+          name: vehicles[item].vehicleName,
+          price: vehicles[item].vehiclePrice,
+          image: vehicles[item].vehicleImage,
+        });
+      }
+      this.setState({
+        cars: newState,
+      });
+    });
+  }
 
   render() {
+    const { currentPage, carsPerPage, cars, loading } = this.state;
+
+    const indexOfLastCar = currentPage * carsPerPage;
+    const indexOfFirstCar = indexOfLastCar - carsPerPage;
+    const currentCars = cars.slice(indexOfFirstCar, indexOfLastCar);
+
+    const paginate = (pageNum) => this.setState({ currentPage: pageNum });
+
     return (
-      <div className="row">
-        {[Object.keys(this.state.usedCars).map(key => {
-            return <div className="row col-sm-2 car-card-layout">
-                <Card style={{ width: '20rem' }}>
-                <Card.Img variant="top" src={String(this.state.usedCars[key].image)} />
-                <Card.Body>
-                <Card.Title>{this.state.usedCars[key].name}</Card.Title>
-                <Card.Text>
-                    Price: {this.state.usedCars[key].price}
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-            </Card>
-          </div>
-        })]}
+      <div className="row" style={{ marginTop: "50px" }}>
+        <Container className="container_width">
+          <br></br>
+          <Cars cars={currentCars} loading={loading} />
+          <br></br>
+          <Pagination
+            carsPerPage={carsPerPage}
+            totalCars={cars.length}
+            paginate={paginate}
+          />
+        </Container>
       </div>
     );
   }

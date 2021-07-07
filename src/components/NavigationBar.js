@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import {Nav, Navbar, NavDropdown} from 'react-bootstrap'
+import {Nav, Navbar, NavDropdown, Container} from 'react-bootstrap'
 
 var d = new Date();
 var weekday = new Array(7);
@@ -33,6 +33,7 @@ class NavigationBar extends Component{
     render(){
         return (
             <div>
+                <Container>
                 <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                     <div className="container-fluid">
                     <Navbar.Brand href="/">Jahvon Prince</Navbar.Brand>
@@ -44,25 +45,19 @@ class NavigationBar extends Component{
                                 <NavDropdown.Item href="/new-vehicles">New Vehicles</NavDropdown.Item>
                                 <NavDropdown.Item href="/used-vehicles">Used Vehicles</NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link href="/about-us">About Us</Nav.Link>
+                            <Nav.Link href="/about-us">About</Nav.Link>
                             <Nav.Link href="/contact-us">Contact Us</Nav.Link>
                             <Nav.Link href="/book-appointment">Book Appointment</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                     </div>
                 </Navbar>
+                </Container>
                 <div className='opening-hrs-bar'>
                    <p>Open Today! {this.state.openingHours}</p>
                </div>
+               
             </div>
-            // <ul>
-            //     <li><Link to="/">Home</Link></li>
-            //     <li><Link to="/new-vehicles">New Vehicles</Link></li>
-            //     <li><Link to="/used-vehicles">Used Vehicles</Link></li>
-            //     <li><Link to="/contact-us">Contact</Link></li>
-            //     <li><Link to="/about-us">About</Link></li>
-            //     <li><Link to="/book-appointment">Book Appointment</Link></li>
-            // </ul>
         )
     }
 }

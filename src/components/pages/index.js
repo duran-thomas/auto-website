@@ -26,7 +26,7 @@ class Home extends Component{
                <div className="container container-size">
                     <h4 className="text-center welcome-header">ON BEHALF OF YOUR LOCAL LONG ISLAND CAR SALESMAN, JAHVON PRINCE</h4>
                     <br></br>
-                    <h2 className="text-center welcome-text">Welcome</h2>
+                    <h2 className="text-center welcome-text header__text">WELCOME</h2>
                     <br></br>
                     <p className="text-center body-text">With determination, empathy and humility, Jahvon Prince strives to provide the best business on Long Island. 
                         Through his devotion for helping others actualize their dreams of owning a car, coupled with his aspirations of being the best salesman in Huntington, Jahvon strives to deliver the best service to all his clients.

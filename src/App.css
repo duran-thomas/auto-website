@@ -9,7 +9,7 @@ body{
 }
 
 .opening-hrs-bar{
-  font-family: 'Lato', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   text-align: center;
   height: 40px;
@@ -24,7 +24,7 @@ body{
   margin-bottom: 30px;
   color: #22403D;
   background-color: #E4DBCA !important;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   text-align: center;
   font-size: 25px;
@@ -55,13 +55,13 @@ body{
 }
 
 .welcome-header{
-  font-family: 'Lato', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 25px;
   font-weight: 700;
 }
 
 .welcome-text{
-  font-family: 'Lato', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 30px;
   font-weight: 700;
 }
@@ -73,12 +73,37 @@ body{
   line-height: 28px;
 }
 
-.footer{
+/* #footer{
   background-color: #561B1F;
-  color: #fff
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
+
+#page-container{
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap{
+  padding-bottom: 2.5rm;
+} */
 
 .car-card-layout{
   padding-top: 50px;
   margin: 0 auto !important;
+}
+
+.container_width{
+  max-width: 1500px !important;
+}
+
+.card_buttons{
+  background-color: #561B1F;
+  color: #fff
+}
+
+.header__text{
+  font-family: 'Oswald', sans-serif;
 }
