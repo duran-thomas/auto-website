@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Card, Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Footer from "./../Footer";
 
 class AboutUs extends Component {
