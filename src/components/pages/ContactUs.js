@@ -23,7 +23,7 @@ class ContactUs extends Component {
           <br></br>
           <Container>
             <Row>
-              <Col>
+              <Col lg={6} sm={12}>
                 <Card style={{ marginBottom: "10px" }}>
                   <Card.Header className='header__text'>
                     <strong>Phone Number</strong>
@@ -42,7 +42,7 @@ class ContactUs extends Component {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col>
+              <Col lg={6} sm={12}>
                 <Card style={{ marginBottom: "10px" }} className='header__text'>
                   <Card.Header>
                     <strong>Hours</strong>

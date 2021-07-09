@@ -1,8 +1,11 @@
 import React, { Component } from "react";
-import db from "./../../firebase.config";
+import db from './../../firebase.config'
 import { Container } from "react-bootstrap";
 import Cars from "./../Cars";
 import Pagination from "./../Paginate";
+import Footer from './../Footer'
+
+
 
 var newState = [];
 class NewVehicles extends Component {
@@ -47,7 +50,8 @@ class NewVehicles extends Component {
 
     return (
       <div className="row" style={{ marginTop: "50px" }}>
-        <Container className="container_width">
+        <Container className="container_width" style={{paddingLeft: '30px'}}>
+          <h2 className='div-heading display-4 header__text'>Our Selection Of New Vehicles</h2>
           <br></br>
           <Cars cars={currentCars} loading={loading} />
           <br></br>
@@ -59,6 +63,7 @@ class NewVehicles extends Component {
             prevPage={prevPage}
           />
         </Container>
+        <Footer />
       </div>
     );
   }

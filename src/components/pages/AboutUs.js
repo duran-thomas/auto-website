@@ -55,12 +55,7 @@ class AboutUs extends Component {
         </Container>
         <br></br>
         <Container
-          style={{
-            position: "absolute",
-            bottom: "0",
-            maxWidth: "100%",
-            padding: "0",
-          }}
+          className='footer__container'
         >
           <Footer />
         </Container>
