@@ -1,5 +1,6 @@
 {
   "name": "auto-website",
+  "homepage": "http://jahvonprince.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
