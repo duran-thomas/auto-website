@@ -45,9 +45,10 @@ class UsedVehicles extends Component {
     const paginate = (pageNum) => this.setState({ currentPage: pageNum });
 
     return (
+      <div>
       <div className="row" style={{ marginTop: "50px" }}>
         <Container className="container_width" style={{paddingLeft: '30px'}}>
-        <h2 className='div-heading display-4 header__text'>Our Selection Of Pre-Owned Vehicles</h2>
+        <h2 className='div-heading display-4 header__text text-center'>Our Selection Of Pre-Owned Vehicles</h2>
           <br></br>
           <Cars cars={currentCars} loading={loading} />
           <br></br>
@@ -57,7 +58,9 @@ class UsedVehicles extends Component {
             paginate={paginate}
           />
         </Container>
-        <Footer />
+        </div>
+        <br></br>
+        <Footer className="footer__container"/>
       </div>
     );
   }

@@ -5,17 +5,15 @@ import Footer from "./../Footer";
 class AboutUs extends Component {
   render() {
     return (
-      <div id='page-container'>
-        <Container id='content-wrap'>
-          <Row style={{ marginBottom: "5%" }}>
-            <div className="row">
+      <div id='page-container' >
+        <Container id='content-wrap' className='footer__dynamic'>
+          <Row>
+          <Col lg={12} style={{marginBottom: '5%'}}>
               <div className="col-sm text-center">
                 <br></br>
-                <h1 className="div-heading display-4 header__text">
-                  ABOUT JAHVON PRINCE
-                </h1>
+                <h2 className="div-heading display-4 header__text">ABOUT JAHVON PRINCE </h2>
               </div>
-            </div>
+            </Col>
           </Row>
 
           <Row>
@@ -54,11 +52,7 @@ class AboutUs extends Component {
           </Row>
         </Container>
         <br></br>
-        <Container
-          className='footer__container'
-        >
-          <Footer />
-        </Container>
+          <Footer/>
       </div>
     );
   }

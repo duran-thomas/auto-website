@@ -32,8 +32,8 @@ class NavigationBar extends Component{
 
     render(){
         return (
-            <div>
-                <Container>
+            <div style={{backgroundColor: '#F8F9FA'}}>
+                <Container >
                 <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                     <div className="container-fluid">
                     <Navbar.Brand href="/">Jahvon Prince</Navbar.Brand>

@@ -6,12 +6,12 @@ class BookAppointment extends Component {
   render() {
     return (
       <div id='page-container'>
-        <Container id='content-wrap'>
+        <Container id='content-wrap' className='footer__dynamic'>
           <Row >
             <Col lg={12} style={{marginBottom: '5%'}}>
               <div className="col-sm text-center">
                 <br></br>
-                <h1 className="div-heading display-4 header__text">SCHEDULE A TEST</h1>
+                <h2 className="div-heading display-4 header__text">SCHEDULE A TEST DRIVE</h2>
               </div>
             </Col>
             <br></br>
@@ -84,15 +84,7 @@ class BookAppointment extends Component {
           </Row>
         </Container>
         <br></br>
-        <Container style={{
-          position: 'absolute',
-          bottom: '0',
-          maxWidth: "100%",
-          padding: '0'
-        }}>
-          <Footer />
-        </Container>
-        
+        <Footer className='footer__container'/>
       </div>
     );
   }

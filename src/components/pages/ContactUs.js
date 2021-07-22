@@ -141,7 +141,7 @@ class ContactUs extends Component {
           </Container>
         </div>
         <br></br>
-        <Footer />
+        <Footer className='footer__container'/>
       </div>
     );
   }

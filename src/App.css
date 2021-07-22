@@ -1,71 +1,71 @@
-body{
-  background-color: #E4DBCA im !important;
+body {
+  background-color: #e4dbca im !important;
 }
 
-.custom-container-width{
+.custom-container-width {
   padding: 5%;
 }
 
-.opening-hrs-bar{
-  font-family: 'Oswald', sans-serif;
+.opening-hrs-bar {
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   text-align: center;
   height: 40px;
   line-height: 40px;
-  background-color: #561B1F;
+  background-color: #561b1f;
   color: #fff;
 }
 
-.card-tiles{
+.card-tiles {
   padding: 5%;
   margin-left: 20px;
   margin-bottom: 30px;
-  color: #22403D;
-  background-color: #E4DBCA !important;
-  font-family: 'Oswald', sans-serif;
+  color: #22403d;
+  background-color: #e4dbca !important;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   text-align: center;
   font-size: 25px;
   max-width: 500px;
 }
 
-.card-links{
-  color: #561B1F;
+.card-links {
+  color: #561b1f;
   text-decoration: none;
 }
 
-.card-links:hover{
-  color: #22403D;
+.card-links:hover {
+  color: #22403d;
   text-decoration: none;
 }
 
-.container-size{
+.container-size {
   padding-top: 3%;
   padding-bottom: 3%;
   align-items: center;
 }
 
-.main-header{
-  background-image: url('./img/pexels-pixabay-104836.jpg');
+.main-header {
+  background-image: url("./img/pexels-pixabay-104836.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.welcome-header{
-  font-family: 'Oswald', sans-serif;
+.welcome-header {
+  font-family: "Oswald", sans-serif;
   font-size: 25px;
   font-weight: 700;
 }
 
-.welcome-text{
-  font-family: 'Oswald', sans-serif;
+.welcome-text {
+  font-family: "Oswald", sans-serif;
   font-size: 30px;
   font-weight: 700;
 }
 
-.body-text{
-  font-family: 'Nunito', sans-serif;
+.body-text {
+  font-family: "Nunito", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
@@ -88,35 +88,51 @@ body{
   padding-bottom: 2.5rm;
 } */
 
-.car-card-layout{
+.car-card-layout {
   padding-top: 50px;
   margin: 0 auto !important;
 }
 
-.container_width{
+.container_width {
   max-width: 1500px !important;
 }
 
-.card_buttons{
-  background-color: #561B1F;
-  color: #fff
+.card_buttons {
+  background-color: #561b1f;
+  color: #fff;
 }
 
-.header__text{
-  font-family: 'Oswald', sans-serif;
+.header__text {
+  font-family: "Oswald", sans-serif;
 }
 
-.footer__container{
-    position: absolute;
-    bottom: 0;
-    max-width: 100%;
-    padding: 0;
+.footer__container {
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+  padding: 0;
 }
 
 @media only screen and (max-width: 600px) {
-  .footer__container{
+  .footer__container {
     position: relative;
     max-width: 100%;
     padding: 0 !important;
+  }
 }
+
+.footer__dynamic{
+  height: 73vh;
+}
+
+@media only screen and (min-width: 2560px) {
+  .footer__dynamic{
+    height: 78vh;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .footer__dynamic{
+    height: auto;
+    margin-bottom: 5%;
+  }
 }
